@@ -1,0 +1,29 @@
+<ion-view view-title="Study">
+
+  <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light test-top-bar">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <!--<i class="icon ion-home"></i>-->
+        1-150
+      </a>
+      <a class="tab-item" href="#">
+        <!--<i class="icon ion-star"></i>-->
+        150-300
+      </a>
+      <a class="tab-item" href="#">
+        <!--<i class="icon ion-gear-a"></i>-->
+        1-40
+      </a>
+    </div>
+
+  </div>
+  <ion-content class="padding study-content">
+
+    <ion-list ng-repeat="q in studyQuestions track by $index" class="study-list">
+      <label class="study-label">{{$index + 1}}. {{q.question}}</label>
+      <ion-checkbox class="study-checkbox"  ng-disabled="true" ng-model="q.answers[0].check">{{::q.answers[0].answer}}</ion-checkbox>
+      <ion-checkbox class="study-checkbox"  ng-disabled="true" ng-model="q.answers[1].check">{{::q.answers[1].answer}}</ion-checkbox>
+      <ion-checkbox class="study-checkbox"  ng-disabled="true" ng-model="q.answers[2].check">{{::q.answers[2].answer}}</ion-checkbox>
+    </ion-list>
+  </ion-content>
+</ion-view>

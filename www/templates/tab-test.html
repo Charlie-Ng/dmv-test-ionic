@@ -1,0 +1,48 @@
+<!--<ion-view view-title="Test">-->
+  <!--&lt;!&ndash;<div class="bar bar-header bar-stable">&ndash;&gt;-->
+    <!--&lt;!&ndash;<h1 class="title">Test</h1>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light test-top-bar">-->
+    <!--<div class="tabs">-->
+      <!--<a class="tab-item active" href="#/written">-->
+        <!--&lt;!&ndash;<i class="icon ion-home"></i>&ndash;&gt;-->
+        <!--{{globalCounter + 1}}/15-->
+        <!--<ion-nav-view name="tab-test"></ion-nav-view>-->
+      <!--</a>-->
+      <!--<a class="tab-item" href="#/signs"> &lt;!&ndash; check how they implement chat-detail &ndash;&gt;-->
+        <!--&lt;!&ndash;<i class="icon ion-star"></i>&ndash;&gt;-->
+        <!--{{globalCounter + 1}}/20-->
+        <!--<ion-nav-view name="tab-signs"></ion-nav-view>-->
+      <!--</a>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <ion-content class="padding">
+    <ion-list>
+      <label class="study-label">{{writtenCounter + 1}}. {{currentQuestion.question}}</label>
+      <!--<ion-radio ng-repeat="a in currentQuestion.answers track by $index"-->
+                 <!--ng-model="a.check" ng-click="setCurAnswer($index + 1)">{{a.answer}}</ion-radio>-->
+
+      <label class="item item-radio ng-valid ng-empty" ng-repeat="a in currentQuestion.answers track by $index"
+             ng-model="a.check" ng-click="setCurAnswer($index + 1)">
+        <input type="radio" name="radio-group" ng-model="a.check" ng-disabled="disableSelect">
+        <div class="radio-content">
+          <div class="item-content"
+               ng-style="($index+1) === isCorrect && {'background-color': 'green', 'color': 'white'}">
+            <span class="ng-binding">{{a.answer}}</span>
+          </div>
+          <i class="radio-icon icon ion-checkmark"></i>
+        </div>
+      </label>
+    </ion-list>
+
+
+    <div class="row-center">
+      <button class="col col-center test-buttons button icon-right ion-help button-positive" ng-disabled="disableCheckAns" ng-click="checkAnswer()">Check answer</button>
+      <button class="col col-center test-buttons button icon-right ion-arrow-right-a button-dark" ng-disabled="cannotGoNext" ng-click="nextQuestion()">Next question</button>
+    </div>
+
+  </ion-content>
+  <button class="test-reset-buttons button icon-right ion-refresh" ng-click="getNewTest()">New test</button>
+
+</ion-view>

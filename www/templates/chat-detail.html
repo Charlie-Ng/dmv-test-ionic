@@ -1,0 +1,26 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<!--<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light test-top-bar">-->
+  <!--<div class="tabs">-->
+    <!--<a class="tab-item active" href="#/test">-->
+      <!--&lt;!&ndash;<i class="icon ion-home"></i>&ndash;&gt;-->
+      <!--{{globalCounter + 1}}/15-->
+    <!--</a>-->
+    <!--<a class="tab-item" href="#/iconTest"> &lt;!&ndash; check how they implement chat-detail &ndash;&gt;-->
+      <!--&lt;!&ndash;<i class="icon ion-star"></i>&ndash;&gt;-->
+      <!--{{globalCounter + 1}}/20-->
+    <!--</a>-->
+  <!--</div>-->
+<!--</div>-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="padding">
+    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+    <p>
+      {{chat.lastText}}kkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    </p>
+  </ion-content>
+</ion-view>

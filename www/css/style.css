@@ -1,0 +1,51 @@
+/* Empty. Add your own CSS if you like */
+.study-label{
+  font-size: 16px !important;
+}
+
+.study-checkbox {
+  padding: 12px 12px 12px 60px;
+}
+
+.study-list > .list{
+  margin-bottom: 16px;
+}
+
+.study-checkbox .ng-not-empty + .checkbox-icon::before{
+
+  background-color: #387ef5 !important;
+  border-color: #387ef5 !important;
+}
+
+.study-content {
+  margin-top: 60px;
+}
+
+
+/* test.html css */
+.test-buttons{
+  margin: 16px auto 16px auto;
+  width: 160px;
+}
+
+.test-buttons::before {
+  padding-right: 12px !important;
+}
+
+.test-reset-buttons {
+  bottom: 58px;
+  margin-left: 10px;
+  position: absolute;
+  background-color: #d1d1d1;
+}
+
+.test-top-bar .tabs {
+  top: 0px !important;
+  height: 56px;
+}
+
+.test-top-bar .tab-title {
+  /*color: white;*/
+  font-size: 14px;
+  font-weight: bold;
+}
